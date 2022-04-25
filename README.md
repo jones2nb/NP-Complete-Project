@@ -6,6 +6,12 @@ Jacob - Exact Code
 Nick - Approximization Presentation
 Tate - Approximization Code
 
+# What is a maximum Clique?
+A Clique is a set of verticies where each verticie is connected by an edge to every other verticie in the clique. We are tasked with finding the maximum clique in a given graph. 
+
+# Reduction
+
+# input
 Input:
 7
 0 1 2 3 5
