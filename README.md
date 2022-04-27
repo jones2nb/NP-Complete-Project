@@ -22,5 +22,10 @@ Input:
 5 3 0 4 6
 6 1 4 3 5
 
+Input specification:
+First Line - # of verticies
+Next N lines - first # is vertex name, following numbers are edge relations
+
+
 Given an undirected graph of size X is there a clique of size X?
 Given an undirected graph of size X what is the max clique?
