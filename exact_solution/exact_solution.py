@@ -6,20 +6,24 @@ Date: April 25, 2022
 """
 def clique(graph, vertex):
     neighbors = graph[vertex]
-    for edge in neighbors:
-        pass
+    clique = [vertex]
+    for neighbor in neighbors:
+        temp = graph[neighbor]
+        for vertex in temp:
+            if vertex in neighbors and vertex not in clique:
+                clique.append(vertex)
 
-    pass
+    return len(clique), clique
 
 def max_clique(graph):
     max_clique = 0
-    clique = []
+    cliques = []
     for vertex in graph.keys():
         clique_size, found_clique = clique(graph, vertex)
         if clique_size > max_clique:
             max_clique = clique_size
-            clique = found_clique
-    return max_clique, clique
+            cliques = found_clique
+    return max_clique, cliques
 
 
 """
@@ -33,6 +37,10 @@ def main():
         vertex = input().split()
         graph[vertex[0]] = set(vertex[1:])
     # print(graph)
+    size, clique = max_clique(graph)
+    print(f"largest clique: {size}")
+    print(f"vertex in the clique are: {clique}")
+
 
 if __name__ == "__main__":
     main()
