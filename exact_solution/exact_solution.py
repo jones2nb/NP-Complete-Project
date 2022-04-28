@@ -4,14 +4,14 @@ Exact solution for the max clique problem
 Author: Jacob McClaskey
 Date: April 25, 2022
 """
-from zeroconf import itertools
+import itertools
 
 
 def is_clique(graph, test_clique):
 
     for vertex in test_clique:
-        print(f"Test Clique is: {test_clique}")
-        print(f"edges for {vertex} are: {graph[vertex]}")
+        # print(f"Test Clique is: {test_clique}")
+        # print(f"edges for {vertex} are: {graph[vertex]}")
         if test_clique.issubset(graph[vertex]):
             continue
         else:
