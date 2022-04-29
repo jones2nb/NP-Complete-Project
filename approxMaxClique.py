@@ -1,4 +1,12 @@
 
+"""
+This is a greedy algorithm that takes processes vertex
+with highest degree first to find cliques, then removes said
+vertex. Flawed in that the vertex with the highest degree may not
+be within the largest clique. This algorithm runs in polynomial time.
+
+"""
+
 def main():
     n = int(input())
     e = [input().split() for _ in range(n)]
@@ -14,6 +22,8 @@ def main():
 
     maxV = returnLargest(G)
 
+    #continue for all nodes
+
     while maxV:
 
         result = find_clique(G, maxV)
@@ -25,6 +35,7 @@ def main():
 
     print(maxClique)
 
+#Returns the key that holds the vertex with the highest degree.
 
 def returnLargest(G):
     max_len = 0
@@ -36,6 +47,7 @@ def returnLargest(G):
             max_len = cur_len
     return max_key
 
+#Searches for cliques given a starting vertex and a graph.
 
 def find_clique(G, vert):
     clique = [vert]
