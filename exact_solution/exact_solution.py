@@ -62,7 +62,7 @@ def main():
     t1 = time.time() - t0
     print(f"largest clique: {size}")
     print(f"vertex in the clique are: {clique}")
-    print(f"Time elpsed: {t1} seconds")
+    # print(f"Time elpsed: {t1} seconds")
 
 
 if __name__ == "__main__":
